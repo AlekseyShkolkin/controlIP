@@ -4202,6 +4202,9 @@ class ObjectDetailState extends State<ObjectDetail> {
                                           setState(() {});
                                           focusNode93.requestFocus();
                                           sredthick();
+                                          object.thickofdrylay4 = value;
+                                          object.thickofdrylay4 =
+                                              thickofdrylayController4.text;
                                         },
                                         focusNode: focusNode93,
                                         maxLength: 4,
@@ -4315,6 +4318,8 @@ class ObjectDetailState extends State<ObjectDetail> {
                           setState(() {
                             focusNode45.requestFocus();
                             object.adhesionmethod = value;
+                            object.adhesionmethod =
+                                adhesionmethodController.text;
                             object.adhesion = 'нет данных';
                           });
                         },
@@ -4444,6 +4449,7 @@ class ObjectDetailState extends State<ObjectDetail> {
                           setState(() {
                             focusNode25.requestFocus();
                             object.adhesion = value;
+                            object.adhesion = adhesionController.text;
                           });
                         },
                       ),
@@ -4523,9 +4529,11 @@ class ObjectDetailState extends State<ObjectDetail> {
                         style: textStyle,
                         value: object.dielcont,
                         onChanged: (String value) {
-                          setState(() {});
-                          focusNode26.requestFocus();
-                          object.dielcont = value;
+                          setState(() {
+                            focusNode26.requestFocus();
+                            object.dielcont = value;
+                            object.dielcont = dielcontController.text;
+                          });
                         },
                       ),
                       SizedBox(height: 10),
@@ -4581,6 +4589,7 @@ class ObjectDetailState extends State<ObjectDetail> {
                                     setState(() {
                                       focusNode96.requestFocus();
                                       object.katRal = value;
+                                      object.katRal = katRalController.text;
                                       object.colorRal = 'нет данных';
                                     });
                                   },
@@ -5518,6 +5527,7 @@ class ObjectDetailState extends State<ObjectDetail> {
                                   onChanged: (String value) {
                                     setState(() {
                                       object.colorRal = value;
+                                      object.colorRal = colorRalController.text;
                                     });
                                   },
                                 ),
@@ -5754,6 +5764,9 @@ class ObjectDetailState extends State<ObjectDetail> {
                                       onChanged: (String value) {
                                         setState(() {
                                           focusNode27.requestFocus();
+                                          object.thickinsulmeter = value;
+                                          object.thickinsulmeter =
+                                              thickinsulmeterController.text;
                                         });
                                       },
                                       maxLength: 20,
@@ -5816,6 +5829,11 @@ class ObjectDetailState extends State<ObjectDetail> {
                                             onChanged: (String value) {
                                               setState(() {
                                                 focusNode12.requestFocus();
+                                                object.tickinsulmeternumb =
+                                                    value;
+                                                object.tickinsulmeternumb =
+                                                    tickinsulmeternumbController
+                                                        .text;
                                               });
                                             },
                                             maxLength: 30,
@@ -6012,6 +6030,9 @@ class ObjectDetailState extends State<ObjectDetail> {
                                       onChanged: (String value) {
                                         setState(() {
                                           focusNode28.requestFocus();
+                                          object.adhesmeter = value;
+                                          object.adhesmeter =
+                                              adhesmeterController.text;
                                         });
                                       },
                                       maxLength: 20,
@@ -6074,6 +6095,10 @@ class ObjectDetailState extends State<ObjectDetail> {
                                             onChanged: (String value) {
                                               setState(() {
                                                 focusNode13.requestFocus();
+                                                object.adhesmeternumb = value;
+                                                object.adhesmeternumb =
+                                                    adhesmeternumbController
+                                                        .text;
                                               });
                                             },
                                             maxLength: 30,
@@ -6270,6 +6295,9 @@ class ObjectDetailState extends State<ObjectDetail> {
                                       onChanged: (String value) {
                                         setState(() {
                                           focusNode29.requestFocus();
+                                          object.continmeter = value;
+                                          object.continmeter =
+                                              continmeterController.text;
                                         });
                                       },
                                       maxLength: 20,
@@ -6332,6 +6360,10 @@ class ObjectDetailState extends State<ObjectDetail> {
                                             onChanged: (String value) {
                                               setState(() {
                                                 focusNode49.requestFocus();
+                                                object.continmeternumb = value;
+                                                object.continmeternumb =
+                                                    continmeternumbController
+                                                        .text;
                                               });
                                             },
                                             maxLength: 30,
@@ -6528,6 +6560,8 @@ class ObjectDetailState extends State<ObjectDetail> {
                                       onChanged: (String value) {
                                         setState(() {
                                           focusNode30.requestFocus();
+                                          object.setvik = value;
+                                          object.setvik = setvikController.text;
                                         });
                                       },
                                       maxLength: 20,
@@ -6590,6 +6624,9 @@ class ObjectDetailState extends State<ObjectDetail> {
                                             onChanged: (String value) {
                                               setState(() {
                                                 focusNode51.requestFocus();
+                                                object.setviknumb = value;
+                                                object.setviknumb =
+                                                    setviknumbController.text;
                                               });
                                             },
                                             maxLength: 30,
@@ -6855,11 +6892,11 @@ class ObjectDetailState extends State<ObjectDetail> {
                         value: object.changegloss,
                         onChanged: (String value) {
                           setState(() {
+                            focusNode32.requestFocus();
                             changeglossController.text = value;
+                            object.changegloss = value;
+                            calculateHighestDegreeD();
                           });
-                          focusNode32.requestFocus();
-                          object.changegloss = value;
-                          calculateHighestDegreeD();
                         },
                       ),
                       const SizedBox(height: 10),
@@ -6904,10 +6941,10 @@ class ObjectDetailState extends State<ObjectDetail> {
                         onChanged: (String value) {
                           setState(() {
                             changecolorController.text = value;
+                            focusNode31.requestFocus();
+                            object.changecolor = value;
+                            calculateHighestDegreeD();
                           });
-                          focusNode31.requestFocus();
-                          object.changecolor = value;
-                          calculateHighestDegreeD();
                         },
                       ),
                       const SizedBox(height: 10),
@@ -6952,10 +6989,10 @@ class ObjectDetailState extends State<ObjectDetail> {
                         onChanged: (String value) {
                           setState(() {
                             mudretantController.text = value;
+                            focusNode33.requestFocus();
+                            object.mudretant = value;
+                            calculateHighestDegreeD();
                           });
-                          focusNode33.requestFocus();
-                          object.mudretant = value;
-                          calculateHighestDegreeD();
                         },
                       ),
                       const SizedBox(height: 10),
@@ -6963,10 +7000,10 @@ class ObjectDetailState extends State<ObjectDetail> {
                         onChanged: (String value) {
                           setState(() {
                             chalkingController.text = value;
+                            focusNode34.requestFocus();
+                            object.chalking = value;
+                            calculateHighestDegreeD();
                           });
-                          focusNode34.requestFocus();
-                          object.chalking = value;
-                          calculateHighestDegreeD();
                         },
                         isExpanded: true,
                         focusNode: focusNode34,
@@ -7081,11 +7118,11 @@ class ObjectDetailState extends State<ObjectDetail> {
                         onChanged: (String value) {
                           setState(() {
                             rastreskController.text = value;
-                          });
-                          focusNode59.requestFocus();
-                          object.rastresk = value;
+                            focusNode59.requestFocus();
+                            object.rastresk = value;
 
-                          calculateHighestDegreeZ();
+                            calculateHighestDegreeZ();
+                          });
                         },
                       ),
                       const SizedBox(height: 10),
@@ -7129,12 +7166,13 @@ class ObjectDetailState extends State<ObjectDetail> {
                         value: object.otslaivan,
                         onChanged: (String value) {
                           setState(() {
+                            object.otslaivan = otslaivanController.text;
                             otslaivanController.text = value;
-                          });
-                          focusNode60.requestFocus();
-                          object.otslaivan = value;
+                            focusNode60.requestFocus();
+                            object.otslaivan = value;
 
-                          calculateHighestDegreeZ();
+                            calculateHighestDegreeZ();
+                          });
                         },
                       ),
                       const SizedBox(height: 10),
@@ -7179,11 +7217,11 @@ class ObjectDetailState extends State<ObjectDetail> {
                         onChanged: (String value) {
                           setState(() {
                             vyvetrivController.text = value;
-                          });
-                          focusNode58.requestFocus();
-                          object.vyvetriv = value;
+                            focusNode58.requestFocus();
+                            object.vyvetriv = value;
 
-                          calculateHighestDegreeZ();
+                            calculateHighestDegreeZ();
+                          });
                         },
                       ),
                       const SizedBox(height: 10),
@@ -7228,10 +7266,10 @@ class ObjectDetailState extends State<ObjectDetail> {
                         onChanged: (String value) {
                           setState(() {
                             puzyrController.text = value;
+                            focusNode57.requestFocus();
+                            object.puzyr = value;
+                            calculateHighestDegreeZ();
                           });
-                          focusNode57.requestFocus();
-                          object.puzyr = value;
-                          calculateHighestDegreeZ();
                         },
                       ),
                       SizedBox(height: 10),
@@ -7276,20 +7314,22 @@ class ObjectDetailState extends State<ObjectDetail> {
                         onChanged: (String value) {
                           setState(() {
                             korroziyaController.text = value;
+                            focusNode56.requestFocus();
+                            object.korroziya = value;
+
+                            calculateHighestDegreeZ();
                           });
-
-                          focusNode56.requestFocus();
-                          object.korroziya = value;
-
-                          calculateHighestDegreeZ();
                         },
                       ),
                       Divider(thickness: 4),
                       TextFormField(
                         focusNode: focusNode35,
                         onChanged: (String value) {
-                          setState(() {});
-                          focusNode35.requestFocus();
+                          setState(() {
+                            focusNode35.requestFocus();
+                            object.description = value;
+                            object.description = descriptionController.text;
+                          });
                         },
                         maxLength: 1000,
                         onSaved: (value) {
@@ -7403,9 +7443,11 @@ class ObjectDetailState extends State<ObjectDetail> {
                         style: textStyle,
                         value: object.filial,
                         onChanged: (String value) {
-                          setState(() {});
-                          focusNode54.requestFocus();
-                          object.filial = value;
+                          setState(() {
+                            focusNode54.requestFocus();
+                            object.filial = value;
+                            object.filial = filialController.text;
+                          });
                         },
                       ),
                       SizedBox(height: 10),
@@ -7413,9 +7455,11 @@ class ObjectDetailState extends State<ObjectDetail> {
                         isExpanded: true,
                         focusNode: focusNode53,
                         onChanged: (String value) {
-                          setState(() {});
-                          focusNode53.requestFocus();
-                          object.dolzhnpredskom = value;
+                          setState(() {
+                            focusNode53.requestFocus();
+                            object.dolzhnpredskom = value;
+                            object.dolzhnpredskom = predskomController.text;
+                          });
                         },
                         decoration: InputDecoration(
                           border: OutlineInputBorder(),
@@ -7461,8 +7505,11 @@ class ObjectDetailState extends State<ObjectDetail> {
                       TextFormField(
                         focusNode: focusNode52,
                         onChanged: (String value) {
-                          setState(() {});
-                          focusNode52.requestFocus();
+                          setState(() {
+                            focusNode52.requestFocus();
+                            object.fiopredskom = value;
+                            object.fiopredskom = fiopredskomController.text;
+                          });
                         },
                         // maxLength: 20,
                         onSaved: (value) {
@@ -7560,21 +7607,26 @@ class ObjectDetailState extends State<ObjectDetail> {
                         style: textStyle,
                         value: object.dolzhnproizvrab,
                         onChanged: (String value) {
-                          setState(() {});
-                          focusNode81.requestFocus();
-                          object.dolzhnproizvrab = value;
+                          setState(() {
+                            focusNode81.requestFocus();
+                            object.dolzhnproizvrab = value;
+                            object.dolzhnproizvrab =
+                                dolzhnproizvrabController.text;
+                          });
                         },
                       ),
                       SizedBox(height: 10),
                       TextFormField(
                         focusNode: focusNode79,
                         onChanged: (String value) {
-                          setState(() {});
-                          focusNode79.requestFocus();
+                          setState(() {     focusNode79.requestFocus();
+                          object.fioproizvrab = value;
+                                object.fioproizvrab = fioproizvrabController.text;});
+                     
                         },
                         // maxLength: 20,
                         onSaved: (value) {
-                          object.fioproizvrab = value;
+                          
                         },
                         controller: fioproizvrabController,
                         style: textStyle,
@@ -7657,17 +7709,21 @@ class ObjectDetailState extends State<ObjectDetail> {
                         style: textStyle,
                         value: object.dolzhnpredststroitSK,
                         onChanged: (String value) {
-                          setState(() {});
-                          focusNode88.requestFocus();
+                          setState(() {   focusNode88.requestFocus();
                           object.dolzhnpredststroitSK = value;
+                                object.dolzhnpredststroitSK = dolzhnproizvrabController.text;});
+                       
                         },
                       ),
                       SizedBox(height: 10),
                       TextFormField(
                         focusNode: focusNode83,
                         onChanged: (String value) {
-                          setState(() {});
-                          focusNode83.requestFocus();
+                          setState(() { focusNode83.requestFocus();
+                          object.fiopredststroitSK = value;
+                                object.fiopredststroitSK = fiopredststroitSKController.text;
+                          });
+                         
                         },
                         // maxLength: 20,
                         onSaved: (value) {
@@ -7754,21 +7810,25 @@ class ObjectDetailState extends State<ObjectDetail> {
                         style: textStyle,
                         value: object.dolzhnnachuchastka,
                         onChanged: (String value) {
-                          setState(() {});
-                          focusNode82.requestFocus();
+                          setState(() {   focusNode82.requestFocus();
                           object.dolzhnnachuchastka = value;
+                                object.dolzhnnachuchastka = dolzhnnachuchastkaController.text;});
+                       
                         },
                       ),
                       SizedBox(height: 10),
                       TextFormField(
                         focusNode: focusNode85,
                         onChanged: (String value) {
-                          setState(() {});
-                          focusNode85.requestFocus();
+                          setState(() {focusNode85.requestFocus();
+                            object.fionachuchastka = value;
+                                  object.fionachuchastka = fionachuchastkaController.text;
+                                  });
+                          
                         },
                         // maxLength: 20,
                         onSaved: (value) {
-                          object.fionachuchastka = value;
+                        
                         },
                         controller: fionachuchastkaController,
                         style: textStyle,
@@ -7851,17 +7911,22 @@ class ObjectDetailState extends State<ObjectDetail> {
                         style: textStyle,
                         value: object.dolzhnpredststroit,
                         onChanged: (String value) {
-                          setState(() {});
-                          focusNode89.requestFocus();
+                          setState(() {         focusNode89.requestFocus();
                           object.dolzhnpredststroit = value;
+                                object.dolzhnpredststroit = dolzhnpredststroitController.text;
+                          });
+                 
                         },
                       ),
                       SizedBox(height: 10),
                       TextFormField(
                         focusNode: focusNode84,
                         onChanged: (String value) {
-                          setState(() {});
-                          focusNode84.requestFocus();
+                          setState(() {   focusNode84.requestFocus();
+                                     object.fiopredststroit = value;
+                                           object.fiopredststroit = fiopredststroitController.text;
+                                     });
+                       
                         },
                         // maxLength: 20,
                         onSaved: (value) {
@@ -7960,17 +8025,22 @@ class ObjectDetailState extends State<ObjectDetail> {
                         style: textStyle,
                         value: object.dolzhnpredstzakazch,
                         onChanged: (String value) {
-                          setState(() {});
-                          focusNode111.requestFocus();
+                          setState(() {       focusNode111.requestFocus();
                           object.dolzhnpredstzakazch = value;
+                                object.dolzhnpredstzakazch = dolzhnpredstzakazchController.text;
+                          });
+                   
                         },
                       ),
                       SizedBox(height: 10),
                       TextFormField(
                         focusNode: focusNode80,
                         onChanged: (String value) {
-                          setState(() {});
-                          focusNode80.requestFocus();
+                          setState(() {         focusNode80.requestFocus();
+                          object.fiopredstzakazch = value;
+                                object.fiopredstzakazch = fiopredstzakazchController.text;
+                          });
+                 
                         },
                         // maxLength: 20,
                         onSaved: (value) {
@@ -8022,8 +8092,13 @@ class ObjectDetailState extends State<ObjectDetail> {
                       TextFormField(
                         focusNode: focusNode86,
                         onChanged: (String value) {
-                          setState(() {});
-                          focusNode86.requestFocus();
+                          setState(() {
+
+                                    focusNode86.requestFocus();
+                                    object.fiodruglic = value;
+                                          object.fiodruglic = fiodruglicController.text;
+                          });
+                  
                         },
                         // maxLength: 20,
                         onSaved: (value) {
@@ -8122,17 +8197,22 @@ class ObjectDetailState extends State<ObjectDetail> {
                         style: textStyle,
                         value: object.dolzhnpredstzakazchSK,
                         onChanged: (String value) {
-                          setState(() {});
-                          focusNode113.requestFocus();
+                          setState(() { focusNode113.requestFocus();
                           object.dolzhnpredstzakazchSK = value;
+                                object.dolzhnpredstzakazchSK = dolzhnpredstzakazchSKController.text;
+                          });
+                         
                         },
                       ),
                       SizedBox(height: 10),
                       TextFormField(
                         focusNode: focusNode87,
                         onChanged: (String value) {
-                          setState(() {});
-                          focusNode87.requestFocus();
+                          setState(() {    focusNode87.requestFocus();
+                           object.fiopredstzakazchSK = value;
+                                object.fiopredstzakazchSK = fiopredstzakazchSKController.text;
+                          });
+                      
                         },
                         // maxLength: 20,
                         onSaved: (value) {
