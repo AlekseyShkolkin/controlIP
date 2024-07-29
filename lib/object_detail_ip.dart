@@ -949,13 +949,17 @@ class ObjectDetailIpState extends State<ObjectDetailIp> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Flexible(
-                        child: Text(
-                          'ДОБАВИТЬ ЗАПИСЬ',
-                          style: TextStyle(
-                            fontSize: 22,
-                            fontWeight: FontWeight.w400,
+                        child: FittedBox(
+                          fit: BoxFit.scaleDown,
+                          alignment: Alignment.topLeft,
+                          child: Text(
+                            'ДОБАВИТЬ ЗАПИСЬ',
+                            style: TextStyle(
+                              fontSize: 22,
+                              fontWeight: FontWeight.w400,
+                            ),
+                            overflow: TextOverflow.ellipsis,
                           ),
-                          overflow: TextOverflow.ellipsis,
                         ),
                       ),
                       IconButton(
@@ -1231,17 +1235,12 @@ class ObjectDetailIpState extends State<ObjectDetailIp> {
                           SizedBox(width: 10),
                           Container(
                             alignment: Alignment.center,
-                            child: FittedBox(
-                              fit: BoxFit.scaleDown,
-                              alignment: Alignment.topLeft,
-                              child: Text(
-                                dateObslController.text,
-                                style: TextStyle(
-                                  fontSize: 18,
-                                  color: Theme.of(context).primaryColor,
-                                  fontWeight: FontWeight.w300,
-                                ),
-                                overflow: TextOverflow.ellipsis,
+                            child: Text(
+                              dateObslController.text,
+                              style: TextStyle(
+                                fontSize: 18,
+                                color: Theme.of(context).primaryColor,
+                                fontWeight: FontWeight.w300,
                               ),
                             ),
                           ),
@@ -1282,17 +1281,12 @@ class ObjectDetailIpState extends State<ObjectDetailIp> {
                           SizedBox(width: 10),
                           Container(
                             alignment: Alignment.center,
-                            child: FittedBox(
-                              fit: BoxFit.scaleDown,
-                              alignment: Alignment.topLeft,
-                              child: Text(
-                                dateObsl2Controller.text,
-                                style: TextStyle(
-                                  fontSize: 18,
-                                  color: Theme.of(context).primaryColor,
-                                  fontWeight: FontWeight.w300,
-                                ),
-                                overflow: TextOverflow.ellipsis,
+                            child: Text(
+                              dateObsl2Controller.text,
+                              style: TextStyle(
+                                fontSize: 18,
+                                color: Theme.of(context).primaryColor,
+                                fontWeight: FontWeight.w300,
                               ),
                             ),
                           ),
@@ -1346,10 +1340,11 @@ class ObjectDetailIpState extends State<ObjectDetailIp> {
                         style: textStyle,
                         value: object.osnovanie,
                         onChanged: (String value) {
-                          focusNode2.requestFocus();
-                          setState(() {});
-                          object.osnovanie = value;
-                          object.osnovanie = osnovanieController.text;
+                          setState(() {
+                            focusNode2.requestFocus();
+                            object.osnovanie = value;
+                            object.osnovanie = osnovanieController.text;
+                          });
                         },
                       ),
                       SizedBox(height: 10),
@@ -6617,13 +6612,14 @@ class ObjectDetailIpState extends State<ObjectDetailIp> {
                                       Expanded(
                                         child: TextFormField(
                                           onChanged: (String value) {
-                                            setState(() {focusNode72.requestFocus();
+                                            setState(() {
+                                              focusNode72.requestFocus();
                                               object.sizelengthinsuldamage1 =
-                                                value;
-                                              object.sizelengthinsuldamage1 = sizelengthinsuldamageController1.text;  
-                                            
+                                                  value;
+                                              object.sizelengthinsuldamage1 =
+                                                  sizelengthinsuldamageController1
+                                                      .text;
                                             });
-                                            
                                           },
                                           focusNode: focusNode72,
                                           maxLength: 5,
@@ -6693,12 +6689,14 @@ class ObjectDetailIpState extends State<ObjectDetailIp> {
                                       Expanded(
                                         child: TextFormField(
                                           onChanged: (String value) {
-                                            setState(() {focusNode63.requestFocus();
-                                             object.sizewidthinsuldamage1 =
-                                                value;
-                                              object.sizewidthinsuldamage1 = sizewidthinsuldamageController1.text;
+                                            setState(() {
+                                              focusNode63.requestFocus();
+                                              object.sizewidthinsuldamage1 =
+                                                  value;
+                                              object.sizewidthinsuldamage1 =
+                                                  sizewidthinsuldamageController1
+                                                      .text;
                                             });
-                                            
                                           },
                                           focusNode: focusNode63,
                                           maxLength: 5,
@@ -6768,12 +6766,14 @@ class ObjectDetailIpState extends State<ObjectDetailIp> {
                                       Expanded(
                                         child: TextFormField(
                                           onChanged: (String value) {
-                                            setState(() { focusNode66.requestFocus();
+                                            setState(() {
+                                              focusNode66.requestFocus();
                                               object.sizedepthinsuldamage1 =
-                                                value;
-                                             object.sizedepthinsuldamage1 = sizedepthinsuldamageController1.text;
+                                                  value;
+                                              object.sizedepthinsuldamage1 =
+                                                  sizedepthinsuldamageController1
+                                                      .text;
                                             });
-                                           
                                           },
                                           focusNode: focusNode66,
                                           maxLength: 3,
@@ -6958,12 +6958,12 @@ class ObjectDetailIpState extends State<ObjectDetailIp> {
                                     style: textStyle,
                                     value: object.charinsuldamage2,
                                     onChanged: (String value) {
-                                      setState(() {focusNode20.requestFocus();
-                                      object.charinsuldamage2 = value;
-                                        object.charinsuldamage2 = charinsuldamageController2.text;
-                                      
+                                      setState(() {
+                                        focusNode20.requestFocus();
+                                        object.charinsuldamage2 = value;
+                                        object.charinsuldamage2 =
+                                            charinsuldamageController2.text;
                                       });
-                                      
                                     },
                                   ),
                                   SizedBox(height: 10),
@@ -7057,11 +7057,14 @@ class ObjectDetailIpState extends State<ObjectDetailIp> {
                                       Expanded(
                                         child: TextFormField(
                                           onChanged: (String value) {
-                                            setState(() {   focusNode42.requestFocus();
-                                            object.lochourinsuldamage2 = value;
-                                                     object.lochourinsuldamage2 = lochourinsuldamageController2.text;
+                                            setState(() {
+                                              focusNode42.requestFocus();
+                                              object.lochourinsuldamage2 =
+                                                  value;
+                                              object.lochourinsuldamage2 =
+                                                  lochourinsuldamageController2
+                                                      .text;
                                             });
-                                         
                                           },
                                           focusNode: focusNode42,
                                           maxLength: 2,
@@ -7131,12 +7134,14 @@ class ObjectDetailIpState extends State<ObjectDetailIp> {
                                       Expanded(
                                         child: TextFormField(
                                           onChanged: (String value) {
-                                            setState(() { focusNode61.requestFocus();
-                                             object.locrasstinsuldamage2 = value;
-                                                object.locrasstinsuldamage2 = locrasstinsuldamageController2.text;
-                                            
+                                            setState(() {
+                                              focusNode61.requestFocus();
+                                              object.locrasstinsuldamage2 =
+                                                  value;
+                                              object.locrasstinsuldamage2 =
+                                                  locrasstinsuldamageController2
+                                                      .text;
                                             });
-                                           
                                           },
                                           focusNode: focusNode61,
                                           maxLength: 5,
@@ -7209,13 +7214,14 @@ class ObjectDetailIpState extends State<ObjectDetailIp> {
                                       Expanded(
                                         child: TextFormField(
                                           onChanged: (String value) {
-                                            setState(() {focusNode73.requestFocus();
-                                            object.sizelengthinsuldamage2 =
-                                                value;
-                                            object.sizelengthinsuldamage2 = sizelengthinsuldamageController2.text;
-                                            
+                                            setState(() {
+                                              focusNode73.requestFocus();
+                                              object.sizelengthinsuldamage2 =
+                                                  value;
+                                              object.sizelengthinsuldamage2 =
+                                                  sizelengthinsuldamageController2
+                                                      .text;
                                             });
-                                            
                                           },
                                           focusNode: focusNode73,
                                           maxLength: 5,
@@ -7285,12 +7291,14 @@ class ObjectDetailIpState extends State<ObjectDetailIp> {
                                       Expanded(
                                         child: TextFormField(
                                           onChanged: (String value) {
-                                            setState(() {   focusNode64.requestFocus();
-                                                object.sizewidthinsuldamage2 =
-                                                value;
-                                              object.sizewidthinsuldamage2 = sizewidthinsuldamageController2.text;
+                                            setState(() {
+                                              focusNode64.requestFocus();
+                                              object.sizewidthinsuldamage2 =
+                                                  value;
+                                              object.sizewidthinsuldamage2 =
+                                                  sizewidthinsuldamageController2
+                                                      .text;
                                             });
-                                         
                                           },
                                           focusNode: focusNode64,
                                           maxLength: 5,
@@ -7360,13 +7368,14 @@ class ObjectDetailIpState extends State<ObjectDetailIp> {
                                       Expanded(
                                         child: TextFormField(
                                           onChanged: (String value) {
-                                            setState(() {  focusNode67.requestFocus();
-                                             object.sizedepthinsuldamage2 =
-                                                value;
-                                             object.sizedepthinsuldamage2 = sizedepthinsuldamageController2.text;
-                                            
+                                            setState(() {
+                                              focusNode67.requestFocus();
+                                              object.sizedepthinsuldamage2 =
+                                                  value;
+                                              object.sizedepthinsuldamage2 =
+                                                  sizedepthinsuldamageController2
+                                                      .text;
                                             });
-                                          
                                           },
                                           focusNode: focusNode67,
                                           maxLength: 3,
@@ -7551,12 +7560,12 @@ class ObjectDetailIpState extends State<ObjectDetailIp> {
                                     style: textStyle,
                                     value: object.charinsuldamage3,
                                     onChanged: (String value) {
-                                      setState(() {   focusNode35.requestFocus();
-                                      object.charinsuldamage3 = value;
-                                          object.charinsuldamage3 = charinsuldamageController3.text;
-                                      
+                                      setState(() {
+                                        focusNode35.requestFocus();
+                                        object.charinsuldamage3 = value;
+                                        object.charinsuldamage3 =
+                                            charinsuldamageController3.text;
                                       });
-                                   
                                     },
                                   ),
                                   SizedBox(height: 10),
@@ -7650,11 +7659,14 @@ class ObjectDetailIpState extends State<ObjectDetailIp> {
                                       Expanded(
                                         child: TextFormField(
                                           onChanged: (String value) {
-                                            setState(() { focusNode69.requestFocus();
-                                            object.lochourinsuldamage3 = value;
-                                            object.lochourinsuldamage3 = lochourinsuldamageController3.text;
+                                            setState(() {
+                                              focusNode69.requestFocus();
+                                              object.lochourinsuldamage3 =
+                                                  value;
+                                              object.lochourinsuldamage3 =
+                                                  lochourinsuldamageController3
+                                                      .text;
                                             });
-                                           
                                           },
                                           focusNode: focusNode69,
                                           maxLength: 2,
@@ -7724,11 +7736,14 @@ class ObjectDetailIpState extends State<ObjectDetailIp> {
                                       Expanded(
                                         child: TextFormField(
                                           onChanged: (String value) {
-                                            setState(() {     focusNode62.requestFocus();
-                                             object.locrasstinsuldamage3 = value;
-                                                object.locrasstinsuldamage3 = locrasstinsuldamageController3.text;
+                                            setState(() {
+                                              focusNode62.requestFocus();
+                                              object.locrasstinsuldamage3 =
+                                                  value;
+                                              object.locrasstinsuldamage3 =
+                                                  locrasstinsuldamageController3
+                                                      .text;
                                             });
-                                       
                                           },
                                           focusNode: focusNode62,
                                           maxLength: 5,
@@ -7801,12 +7816,14 @@ class ObjectDetailIpState extends State<ObjectDetailIp> {
                                       Expanded(
                                         child: TextFormField(
                                           onChanged: (String value) {
-                                            setState(() {focusNode74.requestFocus();
-                                             object.sizelengthinsuldamage3 =
-                                                value;
-                                            object.sizelengthinsuldamage3 = sizelengthinsuldamageController3.text;
+                                            setState(() {
+                                              focusNode74.requestFocus();
+                                              object.sizelengthinsuldamage3 =
+                                                  value;
+                                              object.sizelengthinsuldamage3 =
+                                                  sizelengthinsuldamageController3
+                                                      .text;
                                             });
-                                            
                                           },
                                           focusNode: focusNode74,
                                           maxLength: 5,
@@ -7876,12 +7893,14 @@ class ObjectDetailIpState extends State<ObjectDetailIp> {
                                       Expanded(
                                         child: TextFormField(
                                           onChanged: (String value) {
-                                            setState(() { focusNode65.requestFocus();
-                                               object.sizewidthinsuldamage3 =
-                                                value;
-                                             object.sizewidthinsuldamage3 = sizewidthinsuldamageController3.text;
+                                            setState(() {
+                                              focusNode65.requestFocus();
+                                              object.sizewidthinsuldamage3 =
+                                                  value;
+                                              object.sizewidthinsuldamage3 =
+                                                  sizewidthinsuldamageController3
+                                                      .text;
                                             });
-                                           
                                           },
                                           focusNode: focusNode65,
                                           maxLength: 5,
@@ -7951,12 +7970,14 @@ class ObjectDetailIpState extends State<ObjectDetailIp> {
                                       Expanded(
                                         child: TextFormField(
                                           onChanged: (String value) {
-                                            setState(() {focusNode68.requestFocus();
-                                               object.sizedepthinsuldamage3 =
-                                                value;
-                                            object.sizedepthinsuldamage3 = sizedepthinsuldamageController3.text;
+                                            setState(() {
+                                              focusNode68.requestFocus();
+                                              object.sizedepthinsuldamage3 =
+                                                  value;
+                                              object.sizedepthinsuldamage3 =
+                                                  sizedepthinsuldamageController3
+                                                      .text;
                                             });
-                                            
                                           },
                                           focusNode: focusNode68,
                                           maxLength: 3,
@@ -8128,12 +8149,11 @@ class ObjectDetailIpState extends State<ObjectDetailIp> {
                         style: textStyle,
                         value: object.zakl,
                         onChanged: (String value) {
-                          setState(() { focusNode95.requestFocus();
-                          object.zakl = value;
-                          object.zakl = zaklController.text;
-                          
+                          setState(() {
+                            focusNode95.requestFocus();
+                            object.zakl = value;
+                            object.zakl = zaklController.text;
                           });
-                         
                         },
                       ),
                       SizedBox(height: 10),
@@ -8195,11 +8215,11 @@ class ObjectDetailIpState extends State<ObjectDetailIp> {
                       TextFormField(
                         focusNode: focusNode112,
                         onChanged: (String value) {
-                          setState(() { focusNode112.requestFocus();
-                           object.metrrest = value;
-                           object.metrrest = metrrestController.text;
+                          setState(() {
+                            focusNode112.requestFocus();
+                            object.metrrest = value;
+                            object.metrrest = metrrestController.text;
                           });
-                         
                         },
                         maxLength: 3,
                         onSaved: (value) {
@@ -8307,12 +8327,12 @@ class ObjectDetailIpState extends State<ObjectDetailIp> {
                             child: TextFormField(
                               onChanged: (String value) {
                                 setState(() {
-                                       focusNode143.requestFocus();
-                                sredadgrest();
-                                 object.insuladhesrest1 = value;
-                                 object.insuladhesrest1 = insuladhesrestController1.text;
+                                  focusNode143.requestFocus();
+                                  sredadgrest();
+                                  object.insuladhesrest1 = value;
+                                  object.insuladhesrest1 =
+                                      insuladhesrestController1.text;
                                 });
-                           
                               },
                               focusNode: focusNode143,
                               maxLength: 4,
@@ -8366,12 +8386,13 @@ class ObjectDetailIpState extends State<ObjectDetailIp> {
                           Expanded(
                             child: TextFormField(
                               onChanged: (String value) {
-                                setState(() {    focusNode144.requestFocus();
-                                sredadgrest();
-                                    object.insuladhesrest2 = value;
-                                     object.insuladhesrest2 = insuladhesrestController2.text; 
+                                setState(() {
+                                  focusNode144.requestFocus();
+                                  sredadgrest();
+                                  object.insuladhesrest2 = value;
+                                  object.insuladhesrest2 =
+                                      insuladhesrestController2.text;
                                 });
-                            
                               },
                               focusNode: focusNode144,
                               maxLength: 4,
@@ -8425,12 +8446,13 @@ class ObjectDetailIpState extends State<ObjectDetailIp> {
                           Expanded(
                             child: TextFormField(
                               onChanged: (String value) {
-                                setState(() {    focusNode145.requestFocus();
-                                sredadgrest();
-                                    object.insuladhesrest3 = value;
-                                      object.insuladhesrest3 = insuladhesrestController3.text;
+                                setState(() {
+                                  focusNode145.requestFocus();
+                                  sredadgrest();
+                                  object.insuladhesrest3 = value;
+                                  object.insuladhesrest3 =
+                                      insuladhesrestController3.text;
                                 });
-                            
                               },
                               focusNode: focusNode145,
                               maxLength: 4,
@@ -8562,12 +8584,12 @@ class ObjectDetailIpState extends State<ObjectDetailIp> {
                               style: textStyle,
                               value: object.insulcharadhesrest1,
                               onChanged: (String value) {
-                                setState(() {     focusNode146.requestFocus();
-                                object.insulcharadhesrest1 = value;
-                                    object.insulcharadhesrest1 = insulcharadhesrestController1.text;
-                                
+                                setState(() {
+                                  focusNode146.requestFocus();
+                                  object.insulcharadhesrest1 = value;
+                                  object.insulcharadhesrest1 =
+                                      insulcharadhesrestController1.text;
                                 });
-                           
                               },
                             ),
                           ),
@@ -8622,12 +8644,12 @@ class ObjectDetailIpState extends State<ObjectDetailIp> {
                               style: textStyle,
                               value: object.insulcharadhesrest2,
                               onChanged: (String value) {
-                                setState(() {    focusNode147.requestFocus();
-                                object.insulcharadhesrest2 = value;
-                                 object.insulcharadhesrest2 = insulcharadhesrestController2.text;
-                                
+                                setState(() {
+                                  focusNode147.requestFocus();
+                                  object.insulcharadhesrest2 = value;
+                                  object.insulcharadhesrest2 =
+                                      insulcharadhesrestController2.text;
                                 });
-                            
                               },
                             ),
                           ),
@@ -8682,11 +8704,12 @@ class ObjectDetailIpState extends State<ObjectDetailIp> {
                               style: textStyle,
                               value: object.insulcharadhesrest3,
                               onChanged: (String value) {
-                                setState(() {    focusNode148.requestFocus();
-                                object.insulcharadhesrest3 = value;
-                                  object.insulcharadhesrest3 = insulcharadhesrestController3.text;
+                                setState(() {
+                                  focusNode148.requestFocus();
+                                  object.insulcharadhesrest3 = value;
+                                  object.insulcharadhesrest3 =
+                                      insulcharadhesrestController3.text;
                                 });
-                            
                               },
                             ),
                           ),
@@ -8728,12 +8751,13 @@ class ObjectDetailIpState extends State<ObjectDetailIp> {
                           Center(
                             child: TextFormField(
                               onChanged: (String value) {
-                                setState(() {       focusNode131.requestFocus();
-                                minithickinsulrest();
-                                 object.thickinsulrest1 = value;
-                                 object.thickinsulrest1 = thickinsulrestController1.text;
+                                setState(() {
+                                  focusNode131.requestFocus();
+                                  minithickinsulrest();
+                                  object.thickinsulrest1 = value;
+                                  object.thickinsulrest1 =
+                                      thickinsulrestController1.text;
                                 });
-                         
                               },
                               focusNode: focusNode131,
                               maxLength: 4,
@@ -8797,12 +8821,13 @@ class ObjectDetailIpState extends State<ObjectDetailIp> {
                           Expanded(
                             child: TextFormField(
                               onChanged: (String value) {
-                                setState(() {    focusNode132.requestFocus();
-                                minithickinsulrest();
-                                object.thickinsulrest4 = value;
-                                object.thickinsulrest4 = thickinsulrestController4.text;
+                                setState(() {
+                                  focusNode132.requestFocus();
+                                  minithickinsulrest();
+                                  object.thickinsulrest4 = value;
+                                  object.thickinsulrest4 =
+                                      thickinsulrestController4.text;
                                 });
-                            
                               },
                               focusNode: focusNode132,
                               maxLength: 4,
@@ -8881,12 +8906,13 @@ class ObjectDetailIpState extends State<ObjectDetailIp> {
                           Expanded(
                             child: TextFormField(
                               onChanged: (String value) {
-                                setState(() { focusNode133.requestFocus();
-                                minithickinsulrest();
-                                object.thickinsulrest2 = value;
-                                object.thickinsulrest2 = thickinsulrestController2.text;
+                                setState(() {
+                                  focusNode133.requestFocus();
+                                  minithickinsulrest();
+                                  object.thickinsulrest2 = value;
+                                  object.thickinsulrest2 =
+                                      thickinsulrestController2.text;
                                 });
-                               
                               },
                               focusNode: focusNode133,
                               maxLength: 4,
@@ -8941,12 +8967,13 @@ class ObjectDetailIpState extends State<ObjectDetailIp> {
                           Center(
                             child: TextFormField(
                               onChanged: (String value) {
-                                setState(() {   focusNode134.requestFocus();
-                                minithickinsulrest();
-                                 object.thickinsulrest3 = value;
-                                 object.thickinsulrest3 = thickinsulrestController3.text;
+                                setState(() {
+                                  focusNode134.requestFocus();
+                                  minithickinsulrest();
+                                  object.thickinsulrest3 = value;
+                                  object.thickinsulrest3 =
+                                      thickinsulrestController3.text;
                                 });
-                             
                               },
                               focusNode: focusNode134,
                               maxLength: 4,
@@ -9035,12 +9062,13 @@ class ObjectDetailIpState extends State<ObjectDetailIp> {
                           Center(
                             child: TextFormField(
                               onChanged: (String value) {
-                                setState(() {      focusNode135.requestFocus();
-                                minithickinsulrest();
-                                   object.thickinsulrest5 = value;
-                                   object.thickinsulrest5 = thickinsulrestController5.text;
+                                setState(() {
+                                  focusNode135.requestFocus();
+                                  minithickinsulrest();
+                                  object.thickinsulrest5 = value;
+                                  object.thickinsulrest5 =
+                                      thickinsulrestController5.text;
                                 });
-                          
                               },
                               focusNode: focusNode135,
                               maxLength: 4,
@@ -9104,12 +9132,13 @@ class ObjectDetailIpState extends State<ObjectDetailIp> {
                           Expanded(
                             child: TextFormField(
                               onChanged: (String value) {
-                                setState(() {    focusNode136.requestFocus();
-                                minithickinsulrest();
-                                object.thickinsulrest6 = value;
-                                     object.thickinsulrest6 = thickinsulrestController6.text;
+                                setState(() {
+                                  focusNode136.requestFocus();
+                                  minithickinsulrest();
+                                  object.thickinsulrest6 = value;
+                                  object.thickinsulrest6 =
+                                      thickinsulrestController6.text;
                                 });
-                            
                               },
                               focusNode: focusNode136,
                               maxLength: 4,
@@ -9188,12 +9217,13 @@ class ObjectDetailIpState extends State<ObjectDetailIp> {
                           Expanded(
                             child: TextFormField(
                               onChanged: (String value) {
-                                setState(() {  focusNode137.requestFocus();
-                                minithickinsulrest();
-                                object.thickinsulrest7 = value;
-                                  object.thickinsulrest7 = thickinsulrestController7.text;
+                                setState(() {
+                                  focusNode137.requestFocus();
+                                  minithickinsulrest();
+                                  object.thickinsulrest7 = value;
+                                  object.thickinsulrest7 =
+                                      thickinsulrestController7.text;
                                 });
-                              
                               },
                               focusNode: focusNode137,
                               maxLength: 4,
@@ -9248,12 +9278,13 @@ class ObjectDetailIpState extends State<ObjectDetailIp> {
                           Center(
                             child: TextFormField(
                               onChanged: (String value) {
-                                setState(() {      focusNode138.requestFocus();
-                                minithickinsulrest();
-                                 object.thickinsulrest8 = value;
-                                  object.thickinsulrest8 = thickinsulrestController8.text;
+                                setState(() {
+                                  focusNode138.requestFocus();
+                                  minithickinsulrest();
+                                  object.thickinsulrest8 = value;
+                                  object.thickinsulrest8 =
+                                      thickinsulrestController8.text;
                                 });
-                          
                               },
                               focusNode: focusNode138,
                               maxLength: 4,
@@ -9342,12 +9373,13 @@ class ObjectDetailIpState extends State<ObjectDetailIp> {
                           Center(
                             child: TextFormField(
                               onChanged: (String value) {
-                                setState(() { focusNode139.requestFocus();
-                                minithickinsulrest();
-                                object.thickinsulrest9 = value;
-                                 object.thickinsulrest9 = thickinsulrestController9.text;
+                                setState(() {
+                                  focusNode139.requestFocus();
+                                  minithickinsulrest();
+                                  object.thickinsulrest9 = value;
+                                  object.thickinsulrest9 =
+                                      thickinsulrestController9.text;
                                 });
-                               
                               },
                               focusNode: focusNode139,
                               maxLength: 4,
@@ -9411,12 +9443,13 @@ class ObjectDetailIpState extends State<ObjectDetailIp> {
                           Expanded(
                             child: TextFormField(
                               onChanged: (String value) {
-                                setState(() {     focusNode140.requestFocus();
-                                minithickinsulrest();
-                                object.thickinsulrest10 = value;
-                                 object.thickinsulrest10 = thickinsulrestController10.text;
+                                setState(() {
+                                  focusNode140.requestFocus();
+                                  minithickinsulrest();
+                                  object.thickinsulrest10 = value;
+                                  object.thickinsulrest10 =
+                                      thickinsulrestController10.text;
                                 });
-                           
                               },
                               focusNode: focusNode140,
                               maxLength: 4,
@@ -9495,12 +9528,13 @@ class ObjectDetailIpState extends State<ObjectDetailIp> {
                           Expanded(
                             child: TextFormField(
                               onChanged: (String value) {
-                                setState(() {focusNode141.requestFocus();
-                                minithickinsulrest();
+                                setState(() {
+                                  focusNode141.requestFocus();
+                                  minithickinsulrest();
                                   object.thickinsulrest11 = value;
-                                   object.thickinsulrest11 = thickinsulrestController11.text;
+                                  object.thickinsulrest11 =
+                                      thickinsulrestController11.text;
                                 });
-                                
                               },
                               focusNode: focusNode141,
                               maxLength: 4,
@@ -9555,12 +9589,13 @@ class ObjectDetailIpState extends State<ObjectDetailIp> {
                           Center(
                             child: TextFormField(
                               onChanged: (String value) {
-                                setState(() {   focusNode142.requestFocus();
-                                minithickinsulrest();
+                                setState(() {
+                                  focusNode142.requestFocus();
+                                  minithickinsulrest();
                                   object.thickinsulrest12 = value;
-                                  object.thickinsulrest12 = thickinsulrestController12.text;
+                                  object.thickinsulrest12 =
+                                      thickinsulrestController12.text;
                                 });
-                             
                               },
                               focusNode: focusNode142,
                               maxLength: 4,
@@ -9618,11 +9653,12 @@ class ObjectDetailIpState extends State<ObjectDetailIp> {
                       TextFormField(
                         focusNode: focusNode26,
                         onChanged: (String value) {
-                          setState(() {  focusNode26.requestFocus();
+                          setState(() {
+                            focusNode26.requestFocus();
                             object.contininsulrest = value;
-                              object.contininsulrest = contininsulrestController.text;
+                            object.contininsulrest =
+                                contininsulrestController.text;
                           });
-                        
                         },
                         maxLength: 5,
                         onSaved: (value) {
@@ -9724,11 +9760,11 @@ class ObjectDetailIpState extends State<ObjectDetailIp> {
                       TextFormField(
                         focusNode: focusNode40,
                         onChanged: (String value) {
-                          setState(() {     focusNode40.requestFocus();
-                               object.tempair = value;
-                                 object.tempair = tempairController.text;
-                               });
-                     
+                          setState(() {
+                            focusNode40.requestFocus();
+                            object.tempair = value;
+                            object.tempair = tempairController.text;
+                          });
                         },
                         maxLength: 3,
                         onSaved: (value) {
@@ -9781,11 +9817,11 @@ class ObjectDetailIpState extends State<ObjectDetailIp> {
                       TextFormField(
                         focusNode: focusNode39,
                         onChanged: (String value) {
-                          setState(() {focusNode39.requestFocus();
-                          object.tempsurf = value;
+                          setState(() {
+                            focusNode39.requestFocus();
+                            object.tempsurf = value;
                             object.tempsurf = tempsurfController.text;
                           });
-                          
                         },
                         maxLength: 3,
                         onSaved: (value) {
@@ -9839,11 +9875,11 @@ class ObjectDetailIpState extends State<ObjectDetailIp> {
                       TextFormField(
                         focusNode: focusNode38,
                         onChanged: (String value) {
-                          setState(() {focusNode38.requestFocus();
-                             object.relathumid = value;
+                          setState(() {
+                            focusNode38.requestFocus();
+                            object.relathumid = value;
                             object.relathumid = relathumidController.text;
                           });
-                          
                         },
                         maxLength: 2,
                         onSaved: (value) {
@@ -9896,11 +9932,11 @@ class ObjectDetailIpState extends State<ObjectDetailIp> {
                       TextFormField(
                         focusNode: focusNode37,
                         onChanged: (String value) {
-                          setState(() {   focusNode37.requestFocus();
-                          object.dewpoint = value;
+                          setState(() {
+                            focusNode37.requestFocus();
+                            object.dewpoint = value;
                             object.dewpoint = dewpointController.text;
                           });
-                       
                         },
                         maxLength: 6,
                         onSaved: (value) {
@@ -9956,11 +9992,11 @@ class ObjectDetailIpState extends State<ObjectDetailIp> {
                           TextFormField(
                             focusNode: focusNode36,
                             onChanged: (String value) {
-                              setState(() { focusNode36.requestFocus();
-                                 object.difftemp = value;
-                                   object.difftemp = difftempController.text;
+                              setState(() {
+                                focusNode36.requestFocus();
+                                object.difftemp = value;
+                                object.difftemp = difftempController.text;
                               });
-                             
                             },
                             maxLength: 6,
                             onSaved: (value) {
@@ -10170,7 +10206,8 @@ class ObjectDetailIpState extends State<ObjectDetailIp> {
                           setState(() {
                             focusNode27.requestFocus();
                             object.tickinsulmeter = value;
-                              object.tickinsulmeter = tickinsulmeterController.text;
+                            object.tickinsulmeter =
+                                tickinsulmeterController.text;
                           });
                         },
                         maxLength: 30,
@@ -10230,7 +10267,8 @@ class ObjectDetailIpState extends State<ObjectDetailIp> {
                                   setState(() {
                                     focusNode101.requestFocus();
                                     object.tickinsulmeternumb = value;
-                                      object.tickinsulmeternumb = tickinsulmeternumbController.text;
+                                    object.tickinsulmeternumb =
+                                        tickinsulmeternumbController.text;
                                   });
                                 },
                                 maxLength: 30,
@@ -10389,7 +10427,8 @@ class ObjectDetailIpState extends State<ObjectDetailIp> {
                           setState(() {
                             focusNode28.requestFocus();
                             object.tickmetallmeter = value;
-                              object.tickmetallmeter = tickmetallmeterController.text;
+                            object.tickmetallmeter =
+                                tickmetallmeterController.text;
                           });
                         },
                         maxLength: 30,
@@ -10448,7 +10487,8 @@ class ObjectDetailIpState extends State<ObjectDetailIp> {
                                   setState(() {
                                     focusNode103.requestFocus();
                                     object.tickmetallmeternumb = value;
-                                      object.tickmetallmeternumb = tickmetallmeternumbController.text;
+                                    object.tickmetallmeternumb =
+                                        tickmetallmeternumbController.text;
                                   });
                                 },
                                 maxLength: 30,
@@ -10607,7 +10647,7 @@ class ObjectDetailIpState extends State<ObjectDetailIp> {
                           setState(() {
                             focusNode29.requestFocus();
                             object.adhesmeter = value;
-                              object.adhesmeter = adhesmeterController.text;
+                            object.adhesmeter = adhesmeterController.text;
                           });
                         },
                         maxLength: 30,
@@ -10666,7 +10706,8 @@ class ObjectDetailIpState extends State<ObjectDetailIp> {
                                   setState(() {
                                     focusNode105.requestFocus();
                                     object.adhesmeternumb = value;
-                                      object.adhesmeternumb = adhesmeternumbController.text;
+                                    object.adhesmeternumb =
+                                        adhesmeternumbController.text;
                                   });
                                 },
                                 maxLength: 30,
@@ -10824,7 +10865,7 @@ class ObjectDetailIpState extends State<ObjectDetailIp> {
                           setState(() {
                             focusNode30.requestFocus();
                             object.continmeter = value;
-                              object.continmeter = continmeterController.text;
+                            object.continmeter = continmeterController.text;
                           });
                         },
                         maxLength: 30,
@@ -10883,7 +10924,8 @@ class ObjectDetailIpState extends State<ObjectDetailIp> {
                                   setState(() {
                                     focusNode107.requestFocus();
                                     object.continmeternumb = value;
-                                      object.continmeternumb = continmeternumbController.text;
+                                    object.continmeternumb =
+                                        continmeternumbController.text;
                                   });
                                 },
                                 maxLength: 30,
@@ -11041,8 +11083,8 @@ class ObjectDetailIpState extends State<ObjectDetailIp> {
                         onChanged: (String value) {
                           setState(() {
                             focusNode31.requestFocus();
-                             object.setvik = value;
-                               object.setvik = setvikController.text;
+                            object.setvik = value;
+                            object.setvik = setvikController.text;
                           });
                         },
                         maxLength: 30,
@@ -11101,7 +11143,8 @@ class ObjectDetailIpState extends State<ObjectDetailIp> {
                                   setState(() {
                                     focusNode109.requestFocus();
                                     object.setviknumb = value;
-                                      object.setviknumb = setviknumbController.text;
+                                    object.setviknumb =
+                                        setviknumbController.text;
                                   });
                                 },
                                 maxLength: 30,
@@ -11257,8 +11300,8 @@ class ObjectDetailIpState extends State<ObjectDetailIp> {
                         onChanged: (String value) {
                           setState(() {
                             focusNode149.requestFocus();
-                               object.multimeter = value;
-                                 object.multimeter = multimeterController.text;
+                            object.multimeter = value;
+                            object.multimeter = multimeterController.text;
                           });
                         },
                         maxLength: 30,
@@ -11317,7 +11360,8 @@ class ObjectDetailIpState extends State<ObjectDetailIp> {
                                   setState(() {
                                     focusNode150.requestFocus();
                                     object.multimeternumb = value;
-                                      object.multimeternumb = multimeternumbController.text;
+                                    object.multimeternumb =
+                                        multimeternumbController.text;
                                   });
                                 },
                                 maxLength: 30,
@@ -11683,11 +11727,11 @@ class ObjectDetailIpState extends State<ObjectDetailIp> {
                         style: textStyle,
                         value: object.filial,
                         onChanged: (String value) {
-                          setState(() {  focusNode54.requestFocus();
-                          object.filial = value;
+                          setState(() {
+                            focusNode54.requestFocus();
+                            object.filial = value;
                             object.filial = filialController.text;
                           });
-                        
                         },
                       ),
                       SizedBox(height: 10),
@@ -11695,11 +11739,11 @@ class ObjectDetailIpState extends State<ObjectDetailIp> {
                         isExpanded: true,
                         focusNode: focusNode53,
                         onChanged: (String value) {
-                          setState(() { focusNode53.requestFocus();
-                          object.dolzhnpredskom = value;
+                          setState(() {
+                            focusNode53.requestFocus();
+                            object.dolzhnpredskom = value;
                             object.dolzhnpredskom = predskomController.text;
                           });
-                         
                         },
                         decoration: InputDecoration(
                           border: OutlineInputBorder(),
@@ -11745,11 +11789,11 @@ class ObjectDetailIpState extends State<ObjectDetailIp> {
                       TextFormField(
                         focusNode: focusNode52,
                         onChanged: (String value) {
-                          setState(() {focusNode52.requestFocus();
-                          object.fiopredskom = value;
+                          setState(() {
+                            focusNode52.requestFocus();
+                            object.fiopredskom = value;
                             object.fiopredskom = fiopredskomController.text;
                           });
-                          
                         },
                         // maxLength: 20,
                         onSaved: (value) {
@@ -11847,22 +11891,23 @@ class ObjectDetailIpState extends State<ObjectDetailIp> {
                         style: textStyle,
                         value: object.dolzhnproizvrab,
                         onChanged: (String value) {
-                          setState(() {  focusNode81.requestFocus();
-                          object.dolzhnproizvrab = value;
-                            object.dolzhnproizvrab = dolzhnproizvrabController.text;
+                          setState(() {
+                            focusNode81.requestFocus();
+                            object.dolzhnproizvrab = value;
+                            object.dolzhnproizvrab =
+                                dolzhnproizvrabController.text;
                           });
-                        
                         },
                       ),
                       SizedBox(height: 10),
                       TextFormField(
                         focusNode: focusNode79,
                         onChanged: (String value) {
-                          setState(() { focusNode79.requestFocus();
-                          object.fioproizvrab = value;
+                          setState(() {
+                            focusNode79.requestFocus();
+                            object.fioproizvrab = value;
                             object.fioproizvrab = fioproizvrabController.text;
                           });
-                         
                         },
                         // maxLength: 20,
                         onSaved: (value) {
@@ -11949,22 +11994,24 @@ class ObjectDetailIpState extends State<ObjectDetailIp> {
                         style: textStyle,
                         value: object.dolzhnpredststroitSK,
                         onChanged: (String value) {
-                          setState(() {                          focusNode88.requestFocus();
-                          object.dolzhnpredststroitSK = value;
-                            object.dolzhnpredststroitSK = dolzhnproizvrabController.text;
+                          setState(() {
+                            focusNode88.requestFocus();
+                            object.dolzhnpredststroitSK = value;
+                            object.dolzhnpredststroitSK =
+                                dolzhnproizvrabController.text;
                           });
-
                         },
                       ),
                       SizedBox(height: 10),
                       TextFormField(
                         focusNode: focusNode83,
                         onChanged: (String value) {
-                          setState(() {  focusNode83.requestFocus();
-                           object.fiopredststroitSK = value;
-                             object.fiopredststroitSK = fiopredststroitSKController.text;
+                          setState(() {
+                            focusNode83.requestFocus();
+                            object.fiopredststroitSK = value;
+                            object.fiopredststroitSK =
+                                fiopredststroitSKController.text;
                           });
-                        
                         },
                         // maxLength: 20,
                         onSaved: (value) {
@@ -12051,22 +12098,24 @@ class ObjectDetailIpState extends State<ObjectDetailIp> {
                         style: textStyle,
                         value: object.dolzhnnachuchastka,
                         onChanged: (String value) {
-                          setState(() {  focusNode82.requestFocus();
-                          object.dolzhnnachuchastka = value;
-                            object.dolzhnnachuchastka = dolzhnnachuchastkaController.text;
+                          setState(() {
+                            focusNode82.requestFocus();
+                            object.dolzhnnachuchastka = value;
+                            object.dolzhnnachuchastka =
+                                dolzhnnachuchastkaController.text;
                           });
-                        
                         },
                       ),
                       SizedBox(height: 10),
                       TextFormField(
                         focusNode: focusNode85,
                         onChanged: (String value) {
-                          setState(() {   focusNode85.requestFocus();
+                          setState(() {
+                            focusNode85.requestFocus();
                             object.fionachuchastka = value;
-                              object.fionachuchastka = fionachuchastkaController.text;
+                            object.fionachuchastka =
+                                fionachuchastkaController.text;
                           });
-                       
                         },
                         // maxLength: 20,
                         onSaved: (value) {
@@ -12153,22 +12202,24 @@ class ObjectDetailIpState extends State<ObjectDetailIp> {
                         style: textStyle,
                         value: object.dolzhnpredststroit,
                         onChanged: (String value) {
-                          setState(() { focusNode89.requestFocus();
-                          object.dolzhnpredststroit = value;
-                            object.dolzhnpredststroit = dolzhnpredststroitController.text;
+                          setState(() {
+                            focusNode89.requestFocus();
+                            object.dolzhnpredststroit = value;
+                            object.dolzhnpredststroit =
+                                dolzhnpredststroitController.text;
                           });
-                         
                         },
                       ),
                       SizedBox(height: 10),
                       TextFormField(
                         focusNode: focusNode84,
                         onChanged: (String value) {
-                          setState(() { focusNode84.requestFocus();
-                          object.fiopredststroit = value;
-                            object.fiopredststroit = fiopredststroitController.text;
+                          setState(() {
+                            focusNode84.requestFocus();
+                            object.fiopredststroit = value;
+                            object.fiopredststroit =
+                                fiopredststroitController.text;
                           });
-                         
                         },
                         // maxLength: 20,
                         onSaved: (value) {
@@ -12267,22 +12318,24 @@ class ObjectDetailIpState extends State<ObjectDetailIp> {
                         style: textStyle,
                         value: object.dolzhnpredstzakazch,
                         onChanged: (String value) {
-                          setState(() { focusNode111.requestFocus();
-                          object.dolzhnpredstzakazch = value;
-                            object.dolzhnpredstzakazch = dolzhnpredstzakazchController.text;
+                          setState(() {
+                            focusNode111.requestFocus();
+                            object.dolzhnpredstzakazch = value;
+                            object.dolzhnpredstzakazch =
+                                dolzhnpredstzakazchController.text;
                           });
-                         
                         },
                       ),
                       SizedBox(height: 10),
                       TextFormField(
                         focusNode: focusNode80,
                         onChanged: (String value) {
-                          setState(() { focusNode80.requestFocus();
-                          object.fiopredstzakazch = value;
-                            object.fiopredstzakazch = fiopredstzakazchController.text;
+                          setState(() {
+                            focusNode80.requestFocus();
+                            object.fiopredstzakazch = value;
+                            object.fiopredstzakazch =
+                                fiopredstzakazchController.text;
                           });
-                         
                         },
                         // maxLength: 20,
                         onSaved: (value) {
@@ -12334,11 +12387,11 @@ class ObjectDetailIpState extends State<ObjectDetailIp> {
                       TextFormField(
                         focusNode: focusNode86,
                         onChanged: (String value) {
-                          setState(() { focusNode86.requestFocus();
-                          object.fiodruglic = value;
+                          setState(() {
+                            focusNode86.requestFocus();
+                            object.fiodruglic = value;
                             object.fiodruglic = fiodruglicController.text;
                           });
-                         
                         },
                         // maxLength: 20,
                         onSaved: (value) {
@@ -12437,22 +12490,24 @@ class ObjectDetailIpState extends State<ObjectDetailIp> {
                         style: textStyle,
                         value: object.dolzhnpredstzakazchSK,
                         onChanged: (String value) {
-                          setState(() {      focusNode113.requestFocus();
-                          object.dolzhnpredstzakazchSK = value;
-                            object.dolzhnpredstzakazchSK = dolzhnpredstzakazchSKController.text;
+                          setState(() {
+                            focusNode113.requestFocus();
+                            object.dolzhnpredstzakazchSK = value;
+                            object.dolzhnpredstzakazchSK =
+                                dolzhnpredstzakazchSKController.text;
                           });
-                    
                         },
                       ),
                       SizedBox(height: 10),
                       TextFormField(
                         focusNode: focusNode87,
                         onChanged: (String value) {
-                          setState(() {focusNode87.requestFocus();
-                          object.fiopredstzakazchSK = value;
-                            object.fiopredstzakazchSK = fiopredstzakazchSKController.text;
+                          setState(() {
+                            focusNode87.requestFocus();
+                            object.fiopredstzakazchSK = value;
+                            object.fiopredstzakazchSK =
+                                fiopredstzakazchSKController.text;
                           });
-                          
                         },
                         // maxLength: 20,
                         onSaved: (value) {
